@@ -10,33 +10,7 @@ const distPath = path.resolve(__dirname, 'dist');
 const entryPath = path.resolve(__dirname, 'src/index.jsx');
 
 /* RULE CONFIGURATIONS */
-/* -- CSS/SCSS */
-const _SASS_CSS_Rules = {
-  test: /\.(s*)css$/,
-  exclude: '/node_modules/',
-    use: ExtractTextPlugin.extract({
-      fallback: 'style-loader',
-      use: ['css-loader', 'sass-loader']
-    })
-};
-/* -- IMAGES */
-const Image_rules = {
-  test: /\.(png|svg|jpg|gif)$/,
-  use: [
-    'file-loader'
-  ]
-};
 /* -- JS/JSX */
-const JS_rules = {
-  test: /\.(js||jsx)?/,
-  exclude: /node_modules/,
-  use: {
-    loader: "babel-loader"
-  }
-};
-
-
-
 const _JS_JSX_RULES = {
   test: /\.(js||jsx)?/,
   exclude: /node_modules/,
@@ -45,7 +19,7 @@ const _JS_JSX_RULES = {
     presets: ['@babel/env', '@babel/react']
   }
 };
-
+/* -- CSS/SCSS */
 const _SASS_CSS_RULES = {
   test: /\.(s*)css$/,
   exclude: '/node_modules/',
@@ -54,7 +28,7 @@ const _SASS_CSS_RULES = {
       use: ['css-loader', 'sass-loader']
     })
 };
-
+/* -- IMAGES */
 const _IMAGE_RULES = {
   test: /\.(png|jpg|gif)$/,
   loader: 'url-loader',
@@ -81,20 +55,8 @@ module.exports = {
       _IMAGE_RULES
     ]
   },
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       styles: {
-  //         name: 'styles',
-  //         test: /\.(s*)css$/,
-  //         chunks: 'all',
-  //         enforce: true,
-  //       },
-  //     },
-  //   },
-  // },
   plugins: [
-    new ExtractTextPlugin({filename: 'styles.css'})
+    new ExtractTextPlugin({filename: 'styles.css', allChunks: true})
   ],
   resolve: {
     extensions: ['.webpack.js', '.web.js', '.js', '.json', '.jsx'],
@@ -111,21 +73,3 @@ module.exports = {
 //   return prev;
 // }, {});
 
-// module.exports = {
-//   entry: `${_SOURCE}/index.jsx`,
-//   output: _OUTPUT_CONFIG,
-//   module: {
-//     rules: [
-//       _JS_JSX_RULES,
-//       _SASS_CSS_RULES,
-//       _IMAGE_RULES
-//     ]
-//   },
-//   plugins: [
-//     new ExtractTextPlugin({filename: 'styles.css'}),
-//   ],
-//   resolve: {
-//     extensions: ['.webpack.js', '.web.js', '.js', '.json', '.jsx'],
-//     modules: [_MODULES]
-//   }
-// }
