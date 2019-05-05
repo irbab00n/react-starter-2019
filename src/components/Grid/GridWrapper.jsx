@@ -2,10 +2,10 @@ import React from 'react';
 
 import './_grid.scss';
 
-const Grid = ({children: listItems = []}) => (
+const GridWrapper = ({children: listItems = []}) => (
   <div className="grid-wrapper">
     {listItems}
   </div>
 );
 
-export default Grid;
+export default GridWrapper;

@@ -3,13 +3,12 @@
 @import '../../../sass/mixins/flexbox';
 @import '../../../sass/mixins/transition';
 
-$main-view-section-inner-width: 1200px;
 
-#main-view {
+#example-2-view {
   width: 100%;
 }
 
-#main-view > section {
+#example-2-view > section {
   min-height: 600px;
   padding: 20px;
 

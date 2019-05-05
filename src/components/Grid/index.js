@@ -1,2 +1,2 @@
-module.exports.Grid = require('./Grid');
+module.exports.GridWrapper = require('./GridWrapper');
 module.exports.GridItem = require('./GridItem');

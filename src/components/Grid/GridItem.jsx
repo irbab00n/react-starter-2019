@@ -3,10 +3,10 @@ import React from 'react';
 import './_grid.scss';
 
 const GridItem = (props) => {
-  const { children = [], width = 'full' } = props;
+  const { centered = false, children = [], width = 'full' } = props;
 
   return(
-    <div className={`${width}-item`}>
+    <div className={`${width}-item ${centered ? 'centered' : ''}`}>
       {children}
     </div>
   );
