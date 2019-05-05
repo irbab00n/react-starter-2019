@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AsyncComponent from '../../components/AsyncComponent'
+import SplitComponent from '../../components/SplitComponent'
 
 const Example1View = () => (
   <div>

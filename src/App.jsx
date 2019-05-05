@@ -3,13 +3,13 @@ import { createBrowserHistory } from 'history';
 import { Route, Router, Switch } from 'react-router';
 
 /* Components */
-import AsyncComponent from './components/AsyncComponent';
-const Navbar = AsyncComponent(() => import('./components/Navbar'));
+import SplitComponent from './components/SplitComponent';
+const Navbar = SplitComponent(() => import('./components/Navbar'));
 
 /* Views */
-const MainView = AsyncComponent(() => import('./views/main'));
-const Example1View = AsyncComponent(() => import('./views/example1'));
-const Example2View = AsyncComponent(() => import('./views/example2'));
+const MainView = SplitComponent(() => import('./views/main'));
+const Example1View = SplitComponent(() => import('./views/example1'));
+const Example2View = SplitComponent(() => import('./views/example2'));
 
 const hist = createBrowserHistory();
 

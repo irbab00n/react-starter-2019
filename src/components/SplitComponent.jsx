@@ -1,7 +1,14 @@
 import React from "react";
 
-const asyncComponent = (getComponent) => {
-  return class AsyncComponent extends React.Component {
+/** splitComponent 
+ * Returns a Higher-order component that will handle the async dynamic import.
+ * @param {Promise} getComponent - Promise object resulting from the dynamic import() syntax
+ * @returns {React.Component} SplitComponent - A component that will dynamically import and render components 
+ */
+
+const splitComponent = (getComponent) => {
+  /* Must be a class-based component to create a HoC pass-through for the Props, including className */
+  return class SplitComponent extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -30,4 +37,4 @@ const asyncComponent = (getComponent) => {
 };
 
 
-export default asyncComponent;
+export default splitComponent;

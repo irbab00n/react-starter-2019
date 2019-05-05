@@ -1,10 +1,10 @@
 import React from 'react';
 
-import AsyncComponent from '../AsyncComponent';
+import SplitComponent from '../SplitComponent';
 
 import './_navbar.scss';
 
-const Link = AsyncComponent(() => import('../Link'));
+const Link = SplitComponent(() => import('../Link'));
 
 const Navbar = (props) => (
   <header className="navbar">

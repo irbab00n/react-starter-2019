@@ -1,0 +1,43 @@
+@import '../../../sass/colors';
+@import '../../../sass/mixins/flexbox';
+@import '../../../sass/mixins/transition';
+
+.grid-wrapper {
+  @include flex; @include flex-wrap(wrap);
+  @include transition(0.2s);
+  width: 100%;
+  min-height: 280px;
+
+  & > * {
+    &:hover {
+      background-color: $blue-grey-400;
+    }
+  }
+
+  & > .quarter-item {
+    width: 25%;
+    min-height: 22.5vw;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+
+  & > .half-item {
+    width: 50%;
+    min-height: 45vw;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+
+  & > .full-item {
+    width: 100%;
+    min-height: 90vh;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+}

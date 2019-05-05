@@ -1,6 +1,9 @@
 import React from 'react';
 
-import AsyncComponent from '../../components/AsyncComponent'
+import SplitComponent from '../../components/SplitComponent'
+
+// import {Grid, GridItem} from '../../components/Grid';
+const Grid = SplitComponent(() => import('../../components/Grid/Grid'));
 
 import './_main-view.scss';
 

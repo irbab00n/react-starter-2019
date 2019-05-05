@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AsyncComponent from './components/AsyncComponent';
+import SplitComponent from './components/SplitComponent';
 
 import '../sass/main.scss';
 
-const AsyncApp = AsyncComponent(() => import('./App'));
+const AsyncApp = SplitComponent(() => import('./App'));
 
 ReactDOM.render(
   <AsyncApp />,
