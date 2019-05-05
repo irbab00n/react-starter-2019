@@ -1,0 +1,6 @@
+# Dependency directories
+node_modules/
+
+# Build Files
+dist/*.bundle.js
+dist/styles.css

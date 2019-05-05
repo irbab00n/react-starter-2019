@@ -1,0 +1,21 @@
+html {
+  margin: 0;
+  margin-top: 0px;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  // font-family: gordita,Helvetica Neue,Helvetica,sans-serif;
+  // font-family: 'Raleway', sans-serif;
+}
+html.fixed {
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}

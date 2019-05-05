@@ -1,0 +1,68 @@
+@import '../../../sass/colors';
+@import '../../../sass/mixins/box-shadow';
+@import '../../../sass/mixins/flexbox';
+@import '../../../sass/mixins/transition';
+
+$main-view-section-inner-width: 1200px;
+
+#main-view {
+  width: 100%;
+}
+
+#main-view > section {
+  min-height: 600px;
+  padding: 20px;
+
+  &.bg-grey-100 {
+    background-color: $grey-100;
+  }
+  &.bg-grey-200 {
+    background-color: $grey-200;
+  }
+  &.bg-grey-400 {
+    background-color: $grey-400;
+  }
+  &.bg-grey-600 {
+    background-color: $grey-600;
+  }
+}
+
+.grid-wrapper {
+  @include flex; @include flex-wrap(wrap);
+  @include transition(0.2s);
+  width: 100%;
+  min-height: 280px;
+
+  & > * {
+    &:hover {
+      background-color: $blue-grey-400;
+    }
+  }
+
+  & > .quarter-item {
+    width: 25%;
+    min-height: 280px;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+
+  & > .half-item {
+    width: 50%;
+    min-height: 560px;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+
+  & > .full-item {
+    width: 100%;
+    min-height: 800px;
+
+    &.centered {
+      @include flex; @include align-items(center); @include justify-center;
+    }
+  }
+}

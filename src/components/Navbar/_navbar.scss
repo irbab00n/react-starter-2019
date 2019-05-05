@@ -1,0 +1,61 @@
+@import '../../../sass/colors';
+@import '../../../sass/mixins/box-shadow';
+@import '../../../sass/mixins/flexbox';
+@import '../../../sass/mixins/transition';
+
+$navbar-height: 60px;
+
+.navbar {
+  @include flex; // display items as a row if items
+  @include align-items(center); // and align them in the center of the container
+  @include justify-between; // space the items evenly between themselves
+  @include box-shadow(0px, 3px, 5px, 2px, rgba(25, 25, 25, 0.4));
+  background-color: $grey-900;
+  height: $navbar-height;
+}
+
+.navbar > .logo {
+  @include transition(0.2s);
+  color: $grey-200;
+  margin-left: 20px; // Spacing from the left edge of the parent container
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+
+  &:hover {
+    color: $grey-400;
+  }
+
+  &:active {
+    color: $cyan;
+  }
+}
+
+/* NAVBAR LINKS CONTAINER STYLES */
+.navbar > ul.links {
+  @include flex; @include align-items(center); // display as a flexible row, aligned in the center of the space
+  @include transition(0.2s);
+  margin: 0; // Reset the margin
+  margin-right: 20px; // Spacing from the right edge of the parent container
+  padding: 0; // Reset the padding
+  list-style: none; // Remove the Listing dot
+
+  & > li {
+    margin-right: 40px; // Spacing between Links on the navbar
+
+    &:last-child {margin-right: 0px;} // No additional spacing to the right of the last item
+  }
+}
+/* -- NAVBAR LINK STYLES */
+.navbar-link {
+  @include transition(0.2s);
+  color: $grey-200;
+
+  &:hover {
+    color: $grey-400;
+  }
+
+  &:active {
+    color: $cyan;
+  }
+}
