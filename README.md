@@ -1,7 +1,5 @@
-# Diablo 2 Item Viewer
+# React Starter 2019
 
-Since I was a kid, Diablo 2 and it's subsequent expansion was still remains one of my most favorite games to date.
+This starter kit has served 2 purposes; to learn how to implement code-splitting and dynamic imports into a React Application.  
 
-I wanted to create a website that allows you to see Diablo 2 items, compile builds, and simulate loot rolls within the game.
-
-This is that website.
+Components from here on out will use the new Hooks syntax as much as possible.

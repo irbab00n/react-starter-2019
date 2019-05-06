@@ -36,11 +36,6 @@ const _IMAGE_RULES = {
     limit: '25000'
   }
 };
-/* -- FILES */
-const _FILE_RULES = {
-  test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-  loader: 'url-loader?limit=100000'
-};
 
 /* OUTPUT CONFIGURATION */
 const outputConfig = {
@@ -57,8 +52,7 @@ module.exports = {
     rules: [
       _JS_JSX_RULES,
       _SASS_CSS_RULES,
-      _IMAGE_RULES,
-      _FILE_RULES
+      _IMAGE_RULES
     ]
   },
   plugins: [
