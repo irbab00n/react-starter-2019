@@ -9,6 +9,8 @@
   min-height: 280px;
 
   & > * {
+    @include transition(0.2s);
+
     &:hover {
       background-color: $blue-grey-400;
     }
@@ -21,6 +23,10 @@
     &.centered {
       @include flex; @include align-items(center); @include justify-center;
     }
+
+    &.anchor-right {
+      margin-left: auto;
+    }
   }
 
   & > .half-item {
@@ -30,6 +36,10 @@
     &.centered {
       @include flex; @include align-items(center); @include justify-center;
     }
+
+    &.anchor-right {
+      margin-left: auto;
+    }
   }
 
   & > .full-item {
@@ -38,6 +48,10 @@
 
     &.centered {
       @include flex; @include align-items(center); @include justify-center;
+    }
+
+    &.anchor-right {
+      margin-left: auto;
     }
   }
 }
